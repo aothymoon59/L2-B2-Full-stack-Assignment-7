@@ -27,3 +27,14 @@ FROM employees AS e
     JOIN departments AS d ON e.department_id = d.department_id
 WHERE
     d.department_name = 'Engineering';
+
+-- !/ Query 6:
+-- !/ Update the status of the employee with the highest salary to 'Promoted'
+UPDATE employees
+SET
+    status = 'Promoted'
+WHERE
+    salary = (
+        SELECT MAX(salary)
+        FROM employees
+    );
