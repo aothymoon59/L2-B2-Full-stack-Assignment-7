@@ -192,3 +192,7 @@ VALUES (
 DROP TABLE departments;
 
 DROP TABLE employees;
+
+SELECT * FROM departments;
+
+SELECT * FROM employees;
