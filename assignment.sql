@@ -8,5 +8,14 @@ SELECT * FROM employees WHERE salary > 60000;
 SELECT employee_name FROM employees LIMIT 2 OFFSET 2;
 
 -- !/ Query 3:
--- !/ Calculate and display the average age of all employees. sample: 31.6
+-- !/ Calculate and display the average age of all employees.
 SELECT ROUND(AVG(age), 1) AS average_age FROM employees;
+
+-- !/ Query 4:
+-- !/ Retrieve the names of employees whose email addresses contain 'example.com', 'example.net', or 'google.com'.
+SELECT employee_name
+FROM employees
+WHERE
+    email LIKE '%example.com'
+    OR email LIKE '%example.net'
+    OR email LIKE '%google.com';
