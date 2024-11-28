@@ -19,3 +19,11 @@ WHERE
     email LIKE '%example.com'
     OR email LIKE '%example.net'
     OR email LIKE '%google.com';
+
+-- !/ Query 5:
+-- !/ Retrieve the names of all employees who belong to the department titled 'Engineering'.
+SELECT employee_name
+FROM employees AS e
+    JOIN departments AS d ON e.department_id = d.department_id
+WHERE
+    d.department_name = 'Engineering';
